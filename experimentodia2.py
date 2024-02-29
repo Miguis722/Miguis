@@ -1,4 +1,5 @@
 # Categorias = ["Pasteleria", "Panaderia", "Bebidas"]
+#Se crea el diccionario el cual almacenara 3 categorias (pasteleria, panaderia y bebidas)
 menu = dict({
     "Pasteleria":({
         "Productos":list([
@@ -12,13 +13,14 @@ menu = dict({
             {"nombre": "8 - Torta de Milo", "valor": 48000},
             {"nombre": "9 - Torta de Fresa", "valor": 42000},
             {"nombre": "10 - Torta de Frutos Rojos", "valor": 42000}
+    #Despues de haber creado la lista de 10 productos de pasteleria, procedemos creando una SUBlista en la que se almacenaran los descuentos a aplicar.
 ]),
     "Promociones":list([
         {"codigo": 4, "nombre": "Compra de 2", "valor": 90000},
         {"codigo": 8, "nombre": "Compra de 3", "valor": 100000}
     ])
     }),
-
+#Despues procedemos cerrando parentesis, corchetes y llaves, continuamos con la siguiente categoria del diccionario
     "Panaderia":{
         "Productos":list([
             {"nombre": "1 - Pan de leche", "valor": 2500},
@@ -31,7 +33,7 @@ menu = dict({
             {"nombre": "8 - Pan de yuca", "valor": 3000},
             {"nombre": "9 - Pan de breva", "valor": 5000},
             {"nombre": "10 - Pan de arequipe", "valor": 3500}
-    
+    #Repetimos el mismo proceso las veces que queramos, asi haciendo más larga nuestro diccionario
         ]),
         "Promociones":list([
             {"codigo": 3, "nombre": "Compra de 2", "valor": 20000},
@@ -57,19 +59,24 @@ menu = dict({
     ])
 })
 })
-#Saludo hacia el usuario
+#Saludo hacia el usuario, pediremos un nombre al usuario para poder llamarlo de esa forma, para no decirle todo el tiempo un nombre muy "Habitual"
+#Por lo que colocamos una variable donde guardaremos como desea que se le llame
 print("Bienvenido Usuario")
 user = input("Por favor escriba como desea identificarse: ")
 print(f"A partir de ahora, serás identificado como: {user}")
 
+ 
 #Seleccion de la Categoria (Se muestra categoria y se pide que se escoja cual desea)
 print("Seleccione la categoria:")
 listaCategoria = list(menu.keys())
 
+#En esta funcion se empieza a enlistar y a enumerar las categorias para el usuario
 for i, val in enumerate(listaCategoria):
     print(f"{i}. {val}")
-
+    
+#Adquirimos el número de categoria al cual desea dirigirse el usuario
 opcionCategoria = int(input())   
+
 
 categoriaSeleccionada = listaCategoria[opcionCategoria]
 
