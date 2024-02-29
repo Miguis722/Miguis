@@ -86,23 +86,26 @@ productosCategoria = datosCategoria["Productos"]
 
 promocionesCategoria = datosCategoria["Promociones"]
 
+#Mostramos a que categoría se fue dirigido
 print(f"{user} has seleccionado la categoría: {categoriaSeleccionada}")
+print(" ")
 
 #Una vez ya seleccionada la categoria, procedemos a mostrar los productos especificos de cada categoria
 print("Lista de productos:" )
 for producto in productosCategoria:
     print(f"Nombre: {producto['nombre']}, Precio: ${producto['valor']}")
+    print(" ")
 
 #Además, mostramos las prmociones disponibles en la categoria seleccionada
 print("Promociones disponibles")
 for promocion in promocionesCategoria:
     print(f"Código: {promocion['codigo']}, Nombre: {promocion['nombre']}, Precio: ${promocion['valor']}")
 
-#
+#Se le muestra al usuario los productos de la categoria que selecciono
 
 opcion = int(input("Escriba el número de producto que desea seleccionar: "))
-
-productoSeleccionado = productosCategoria[opcion - 1] #Recordemos que retiramos uno porque ponemos la opciones 
+    print(" ")
+productoSeleccionado = productosCategoria[opcion - 1] #Recordemos que restamos uno porque ponemos la opciones se muestran
 #desde el numero 1
 nombreProducto = productoSeleccionado["nombre"]
 precioProducto = productoSeleccionado["valor"]
